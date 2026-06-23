@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mustafa Mahmoud Shawky — Senior Architectural Engineer & BIM Specialist</title>
+<meta name="description" content="Portfolio of Mustafa Mahmoud Shawky — Senior Architectural Engineer & BIM Specialist with 19+ years across Kuwait and the Gulf region.">
+<meta property="og:title" content="Mustafa Mahmoud Shawky — Architectural Engineer & BIM Specialist">
+<meta property="og:description" content="19+ years of architectural engineering, BIM management, and Revit automation across high-profile projects in Kuwait and the Gulf.">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+/* ===========================
+   ART DIRECTION:
+   Concept: Precise architectural mind. 19 years of disciplined craft.
+   Palette: Deep architectural dark (charcoal/slate), warm gold accent — blueprint meets craftsmanship.
+   Typography: Cormorant Garamond (display, editorial gravity) + Inter (body, technical clarity)
+   Density: Spacious, editorial. Confident whitespace.
+   Motion: Minimal, functional — scroll reveals, cursor transitions
+=========================== */
+
+:root, [data-theme="light"] {
+  --color-bg:             #f5f4f0;
+  --color-surface:        #f9f8f5;
+  --color-surface-2:      #fdfcfa;
+  --color-surface-offset: #edeae4;
+  --color-surface-dynamic:#e4e0d8;
+  --color-divider:        #d8d4cc;
+  --color-border:         #cdc8be;
+  --color-text:           #1a1814;
+  --color-text-muted:     #6b6760;
+  --color-text-faint:     #a8a49c;
+  --color-text-inverse:   #f5f4f0;
+  --color-primary:        #8b6914;
+  --color-primary-hover:  #6d5010;
+  --color-primary-active: #4f3a0c;
+  --color-primary-highlight: #e8dcc8;
+  --color-accent-warm:    #c4922a;
+  --color-accent-light:   #d4a845;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+  --transition-interactive: 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-sm: 0 1px 3px oklch(0.2 0.01 60 / 0.06);
+  --shadow-md: 0 4px 16px oklch(0.2 0.01 60 / 0.08);
+  --shadow-lg: 0 16px 48px oklch(0.2 0.01 60 / 0.12);
+  --content-narrow: 640px;
+  --content-default: 960px;
+  --content-wide: 1200px;
+  --font-display: 'Cormorant Garamond', 'Georgia', serif;
+  --font-body: 'Inter', 'Helvetica Neue', sans-serif;
+  --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+  --text-sm:   clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
+  --text-base: clamp(1rem,     0.95rem + 0.25vw, 1.125rem);
+  --text-lg:   clamp(1.125rem, 1rem    + 0.75vw, 1.5rem);
+  --text-xl:   clamp(1.5rem,   1.2rem  + 1.25vw, 2.25rem);
+  --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
+  --text-3xl:  clamp(2.5rem,   1rem    + 4vw,    5rem);
+  --text-hero: clamp(3rem,     0.5rem  + 7vw,    8rem);
+  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 0.75rem;
+  --space-4: 1rem; --space-5: 1.25rem; --space-6: 1.5rem;
+  --space-8: 2rem; --space-10: 2.5rem; --space-12: 3rem;
+  --space-16: 4rem; --space-20: 5rem; --space-24: 6rem;
+  --space-32: 8rem;
+}
+
+[data-theme="dark"] {
+  --color-bg:             #0e0d0b;
+  --color-surface:        #141210;
+  --color-surface-2:      #1a1814;
+  --color-surface-offset: #1f1d19;
+  --color-surface-dynamic:#27241e;
+  --color-divider:        #2a2820;
+  --color-border:         #353229;
+  --color-text:           #e8e4dc;
+  --color-text-muted:     #8c8880;
+  --color-text-faint:     #5a5750;
+  --color-text-inverse:   #0e0d0b;
+  --color-primary:        #c4922a;
+  --color-primary-hover:  #d4a845;
+  --color-primary-active: #e0bb60;
+  --color-primary-highlight: #2d2518;
+  --color-accent-warm:    #c4922a;
+  --color-accent-light:   #d4a845;
+  --shadow-sm: 0 1px 3px oklch(0 0 0 / 0.3);
+  --shadow-md: 0 4px 16px oklch(0 0 0 / 0.4);
+  --shadow-lg: 0 16px 48px oklch(0 0 0 / 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --color-bg: #0e0d0b; --color-surface: #141210; --color-surface-2: #1a1814;
+    --color-surface-offset: #1f1d19; --color-surface-dynamic: #27241e;
+    --color-divider: #2a2820; --color-border: #353229;
+    --color-text: #e8e4dc; --color-text-muted: #8c8880; --color-text-faint: #5a5750;
+    --color-text-inverse: #0e0d0b; --color-primary: #c4922a;
+    --color-primary-hover: #d4a845; --color-primary-active: #e0bb60;
+    --color-primary-highlight: #2d2518;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--space-20); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+body { min-height: 100dvh; font-family: var(--font-body); font-size: var(--text-base); color: var(--color-text); background-color: var(--color-bg); line-height: 1.6; }
+img, video, canvas { display: block; max-width: 100%; height: auto; }
+ul[role="list"], ol[role="list"] { list-style: none; }
+input, button, textarea, select { font: inherit; color: inherit; }
+h1,h2,h3,h4,h5,h6 { text-wrap: balance; line-height: 1.1; font-family: var(--font-display); font-weight: 400; }
+p, li { text-wrap: pretty; }
+button { cursor: pointer; background: none; border: none; }
+a, button, [role="button"] { transition: color var(--transition-interactive), background var(--transition-interactive), border-color var(--transition-interactive), opacity var(--transition-interactive); }
+::selection { background: oklch(from var(--color-primary) l c h / 0.2); }
+:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-sm); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* ===========================  LAYOUT  =========================== */
+.container { max-width: var(--content-default); margin-inline: auto; padding-inline: var(--space-6); }
+.container--wide { max-width: var(--content-wide); margin-inline: auto; padding-inline: var(--space-6); }
+.section { padding-block: clamp(var(--space-16), 8vw, var(--space-32)); }
+
+/* ===========================  NAV  =========================== */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding-block: var(--space-4);
+  background: oklch(from var(--color-bg) l c h / 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid oklch(from var(--color-text) l c h / 0.08);
+  transition: box-shadow 0.3s;
+}
+.nav.scrolled { box-shadow: var(--shadow-md); }
+.nav-inner { max-width: var(--content-wide); margin-inline: auto; padding-inline: var(--space-6); display: flex; align-items: center; justify-content: space-between; gap: var(--space-8); }
+.nav-logo { display: flex; align-items: center; gap: var(--space-3); text-decoration: none; color: var(--color-text); }
+.nav-logo-icon { width: 36px; height: 36px; flex-shrink: 0; }
+.nav-logo-name { font-family: var(--font-display); font-size: var(--text-lg); font-weight: 500; letter-spacing: -0.01em; }
+.nav-links { display: flex; gap: var(--space-8); list-style: none; align-items: center; }
+.nav-links a { text-decoration: none; color: var(--color-text-muted); font-size: var(--text-sm); font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; }
+.nav-links a:hover { color: var(--color-primary); }
+.nav-actions { display: flex; align-items: center; gap: var(--space-3); }
+.btn-theme { padding: var(--space-2); border-radius: var(--radius-md); color: var(--color-text-muted); display: flex; align-items: center; }
+.btn-theme:hover { color: var(--color-primary); background: var(--color-surface-offset); }
+.btn-contact { padding: var(--space-2) var(--space-5); border-radius: var(--radius-full); background: var(--color-primary); color: var(--color-text-inverse); font-size: var(--text-sm); font-weight: 500; text-decoration: none; }
+.btn-contact:hover { background: var(--color-primary-hover); color: var(--color-text-inverse); }
+.nav-toggle { display: none; padding: var(--space-2); color: var(--color-text-muted); }
+.mobile-menu { display: none; position: fixed; inset: 0; top: 65px; background: var(--color-bg); z-index: 99; padding: var(--space-8) var(--space-6); flex-direction: column; gap: var(--space-6); }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { text-decoration: none; color: var(--color-text); font-size: var(--text-xl); font-family: var(--font-display); padding-block: var(--space-3); border-bottom: 1px solid var(--color-divider); }
+
+/* ===========================  HERO  =========================== */
+.hero {
+  min-height: 100dvh; display: flex; align-items: center;
+  padding-top: 90px;
+  background: var(--color-bg);
+  position: relative; overflow: hidden;
+}
+.hero-bg-lines {
+  position: absolute; inset: 0; pointer-events: none; opacity: 0.04;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 79px, var(--color-text) 79px, var(--color-text) 80px),
+                    repeating-linear-gradient(90deg, transparent, transparent 79px, var(--color-text) 79px, var(--color-text) 80px);
+}
+.hero-content { position: relative; z-index: 1; padding-block: var(--space-20); }
+.hero-eyebrow { font-family: var(--font-body); font-size: var(--text-xs); font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-6); display: flex; align-items: center; gap: var(--space-3); }
+.hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--color-primary); }
+.hero-title { font-size: var(--text-hero); font-weight: 300; letter-spacing: -0.02em; line-height: 0.95; margin-bottom: var(--space-8); }
+.hero-title em { font-style: italic; color: var(--color-primary); }
+.hero-subtitle { font-family: var(--font-body); font-size: var(--text-lg); color: var(--color-text-muted); font-weight: 300; max-width: 52ch; margin-bottom: var(--space-12); line-height: 1.6; }
+.hero-stats { display: flex; gap: var(--space-12); margin-bottom: var(--space-12); flex-wrap: wrap; }
+.hero-stat-num { font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 500; color: var(--color-primary); line-height: 1; }
+.hero-stat-label { font-size: var(--text-xs); color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.12em; margin-top: var(--space-1); }
+.hero-ctas { display: flex; gap: var(--space-4); flex-wrap: wrap; }
+.btn-primary { padding: var(--space-4) var(--space-8); background: var(--color-primary); color: var(--color-text-inverse); border-radius: var(--radius-full); font-size: var(--text-sm); font-weight: 500; text-decoration: none; display: inline-flex; align-items: center; gap: var(--space-2); }
+.btn-primary:hover { background: var(--color-primary-hover); color: var(--color-text-inverse); }
+.btn-secondary { padding: var(--space-4) var(--space-8); border: 1px solid oklch(from var(--color-text) l c h / 0.2); color: var(--color-text); border-radius: var(--radius-full); font-size: var(--text-sm); font-weight: 400; text-decoration: none; display: inline-flex; align-items: center; gap: var(--space-2); }
+.btn-secondary:hover { border-color: var(--color-primary); color: var(--color-primary); }
+.hero-scroll { position: absolute; bottom: var(--space-8); left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: var(--space-2); color: var(--color-text-faint); font-size: var(--text-xs); letter-spacing: 0.15em; text-transform: uppercase; }
+.hero-scroll-line { width: 1px; height: 48px; background: linear-gradient(to bottom, var(--color-primary), transparent); animation: scrollPulse 2s ease-in-out infinite; }
+@keyframes scrollPulse { 0%,100%{opacity:0.4;transform:scaleY(1)} 50%{opacity:1;transform:scaleY(0.6)} }
+
+/* ===========================  SECTION HEADER  =========================== */
+.section-header { margin-bottom: clamp(var(--space-12), 5vw, var(--space-20)); }
+.section-eyebrow { font-family: var(--font-body); font-size: var(--text-xs); font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-primary); margin-bottom: var(--space-4); display: flex; align-items: center; gap: var(--space-3); }
+.section-eyebrow::before { content: ''; display: block; width: 24px; height: 1px; background: var(--color-primary); }
+.section-title { font-size: var(--text-2xl); font-weight: 300; letter-spacing: -0.02em; }
+.section-title em { font-style: italic; color: var(--color-primary); }
+.section-subtitle { font-family: var(--font-body); color: var(--color-text-muted); font-size: var(--text-base); max-width: 60ch; margin-top: var(--space-4); line-height: 1.6; }
+
+/* ===========================  ABOUT  =========================== */
+.about-section { background: var(--color-surface); border-top: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(var(--space-12), 5vw, var(--space-24)); align-items: start; }
+.about-text p { color: var(--color-text-muted); font-size: var(--text-base); line-height: 1.75; margin-bottom: var(--space-6); }
+.about-text p:last-child { margin-bottom: 0; }
+.about-meta { display: flex; flex-direction: column; gap: var(--space-6); }
+.about-meta-item { display: flex; gap: var(--space-4); padding: var(--space-5) var(--space-6); background: var(--color-surface-2); border-radius: var(--radius-lg); border: 1px solid oklch(from var(--color-text) l c h / 0.06); }
+.about-meta-icon { color: var(--color-primary); font-size: var(--text-lg); flex-shrink: 0; margin-top: 2px; }
+.about-meta-label { font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.12em; font-weight: 500; margin-bottom: var(--space-1); }
+.about-meta-value { font-size: var(--text-sm); color: var(--color-text); font-weight: 400; }
+
+/* ===========================  SKILLS  =========================== */
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+.skill-card { padding: var(--space-8); background: var(--color-surface); border: 1px solid oklch(from var(--color-text) l c h / 0.07); border-radius: var(--radius-xl); transition: box-shadow var(--transition-interactive), transform var(--transition-interactive); }
+.skill-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.skill-card-icon { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; background: var(--color-primary-highlight); border-radius: var(--radius-md); color: var(--color-primary); font-size: var(--text-lg); margin-bottom: var(--space-5); }
+.skill-card-title { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 500; margin-bottom: var(--space-3); }
+.skill-card-desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.6; margin-bottom: var(--space-5); }
+.skill-tags { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.skill-tag { font-size: var(--text-xs); padding: var(--space-1) var(--space-3); background: var(--color-surface-offset); border-radius: var(--radius-full); color: var(--color-text-muted); border: 1px solid oklch(from var(--color-text) l c h / 0.08); }
+
+/* ===========================  EXPERIENCE  =========================== */
+.experience-section { background: var(--color-bg); }
+.timeline { position: relative; }
+.timeline::before { content: ''; position: absolute; left: 15px; top: 8px; bottom: 0; width: 1px; background: linear-gradient(to bottom, var(--color-primary), var(--color-divider)); }
+.timeline-item { display: grid; grid-template-columns: 48px 1fr; gap: var(--space-6); margin-bottom: var(--space-12); }
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-dot { width: 32px; height: 32px; border-radius: var(--radius-full); background: var(--color-surface); border: 2px solid var(--color-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 4px; }
+.timeline-dot-inner { width: 10px; height: 10px; border-radius: var(--radius-full); background: var(--color-primary); }
+.timeline-content { padding-bottom: var(--space-8); border-bottom: 1px solid var(--color-divider); }
+.timeline-item:last-child .timeline-content { border-bottom: none; }
+.timeline-period { font-size: var(--text-xs); color: var(--color-primary); text-transform: uppercase; letter-spacing: 0.15em; font-weight: 500; margin-bottom: var(--space-2); }
+.timeline-role { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 500; margin-bottom: var(--space-1); }
+.timeline-company { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-5); }
+.timeline-bullets { list-style: none; display: flex; flex-direction: column; gap: var(--space-3); }
+.timeline-bullets li { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.65; padding-left: var(--space-5); position: relative; }
+.timeline-bullets li::before { content: '—'; position: absolute; left: 0; color: var(--color-primary); font-size: var(--text-xs); top: 2px; }
+
+/* ===========================  PROJECTS  =========================== */
+.projects-section { background: var(--color-surface); border-top: 1px solid var(--color-divider); border-bottom: 1px solid var(--color-divider); }
+.projects-filter { display: flex; gap: var(--space-3); margin-bottom: var(--space-12); flex-wrap: wrap; }
+.filter-btn { padding: var(--space-2) var(--space-5); border-radius: var(--radius-full); font-size: var(--text-xs); font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; border: 1px solid oklch(from var(--color-text) l c h / 0.15); color: var(--color-text-muted); cursor: pointer; background: transparent; transition: all var(--transition-interactive); }
+.filter-btn:hover, .filter-btn.active { background: var(--color-primary); color: var(--color-text-inverse); border-color: var(--color-primary); }
+.projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
+.project-card { background: var(--color-surface-2); border-radius: var(--radius-xl); overflow: hidden; border: 1px solid oklch(from var(--color-text) l c h / 0.07); transition: box-shadow var(--transition-interactive), transform var(--transition-interactive); display: flex; flex-direction: column; }
+.project-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.project-card.featured { grid-column: span 2; }
+.project-card-visual { aspect-ratio: 16/9; background: var(--color-surface-offset); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.project-card.featured .project-card-visual { aspect-ratio: 21/9; }
+.project-visual-svg { width: 100%; height: 100%; opacity: 0.18; }
+.project-card-body { padding: var(--space-6); flex: 1; display: flex; flex-direction: column; }
+.project-card-category { font-size: var(--text-xs); color: var(--color-primary); text-transform: uppercase; letter-spacing: 0.15em; font-weight: 500; margin-bottom: var(--space-2); }
+.project-card-title { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 500; margin-bottom: var(--space-3); line-height: 1.2; }
+.project-card-desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.65; flex: 1; }
+.project-card-meta { display: flex; gap: var(--space-4); margin-top: var(--space-5); padding-top: var(--space-5); border-top: 1px solid oklch(from var(--color-text) l c h / 0.08); flex-wrap: wrap; }
+.project-meta-item { font-size: var(--text-xs); color: var(--color-text-faint); display: flex; align-items: center; gap: var(--space-2); }
+.project-meta-item i { color: var(--color-primary); font-size: 0.75rem; }
+
+/* ===========================  ACHIEVEMENTS  =========================== */
+.achievements-section { background: var(--color-primary); position: relative; overflow: hidden; }
+.achievements-section .section-eyebrow { color: oklch(from var(--color-text-inverse) l c h / 0.7); }
+.achievements-section .section-eyebrow::before { background: oklch(from var(--color-text-inverse) l c h / 0.5); }
+.achievements-section .section-title { color: var(--color-text-inverse); }
+.achievements-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-8); }
+.achievement-item { text-align: center; }
+.achievement-num { font-family: var(--font-display); font-size: var(--text-3xl); font-weight: 300; color: var(--color-text-inverse); line-height: 1; margin-bottom: var(--space-2); }
+.achievement-label { font-size: var(--text-sm); color: oklch(from var(--color-text-inverse) l c h / 0.75); line-height: 1.4; font-weight: 300; }
+
+/* ===========================  EDUCATION & CERTS  =========================== */
+.edu-section { background: var(--color-bg); }
+.edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: start; }
+.edu-card { padding: var(--space-8); background: var(--color-surface); border-radius: var(--radius-xl); border: 1px solid oklch(from var(--color-text) l c h / 0.07); }
+.edu-card-icon { width: 48px; height: 48px; background: var(--color-primary-highlight); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--color-primary); margin-bottom: var(--space-5); font-size: var(--text-xl); }
+.edu-card-title { font-family: var(--font-display); font-size: var(--text-xl); font-weight: 500; margin-bottom: var(--space-2); }
+.edu-card-sub { font-size: var(--text-sm); color: var(--color-primary); margin-bottom: var(--space-3); font-weight: 500; }
+.edu-card-desc { font-size: var(--text-sm); color: var(--color-text-muted); line-height: 1.65; }
+.certs-list { display: flex; flex-direction: column; gap: var(--space-4); }
+.cert-item { display: flex; align-items: flex-start; gap: var(--space-4); padding: var(--space-5); background: var(--color-surface); border-radius: var(--radius-lg); border: 1px solid oklch(from var(--color-text) l c h / 0.07); }
+.cert-icon { color: var(--color-primary); font-size: var(--text-base); flex-shrink: 0; margin-top: 2px; }
+.cert-name { font-size: var(--text-sm); font-weight: 500; color: var(--color-text); }
+.cert-issuer { font-size: var(--text-xs); color: var(--color-text-muted); margin-top: var(--space-1); }
+
+/* ===========================  CONTACT  =========================== */
+.contact-section { background: var(--color-surface); border-top: 1px solid var(--color-divider); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-16); align-items: start; }
+.contact-info { display: flex; flex-direction: column; gap: var(--space-5); }
+.contact-item { display: flex; align-items: center; gap: var(--space-4); padding: var(--space-5) var(--space-6); background: var(--color-surface-2); border-radius: var(--radius-lg); border: 1px solid oklch(from var(--color-text) l c h / 0.07); text-decoration: none; color: var(--color-text); transition: box-shadow var(--transition-interactive), transform var(--transition-interactive); }
+.contact-item:hover { box-shadow: var(--shadow-sm); transform: translateX(4px); }
+.contact-item-icon { width: 40px; height: 40px; background: var(--color-primary-highlight); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; color: var(--color-primary); flex-shrink: 0; }
+.contact-item-label { font-size: var(--text-xs); color: var(--color-text-faint); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: var(--space-1); }
+.contact-item-value { font-size: var(--text-sm); color: var(--color-text); font-weight: 400; }
+.contact-cta { padding: var(--space-12); background: var(--color-surface-offset); border-radius: var(--radius-xl); border: 1px solid oklch(from var(--color-text) l c h / 0.07); display: flex; flex-direction: column; gap: var(--space-6); align-items: flex-start; }
+.contact-cta-title { font-family: var(--font-display); font-size: var(--text-2xl); font-weight: 300; line-height: 1.2; }
+.contact-cta-title em { font-style: italic; color: var(--color-primary); }
+.contact-cta-text { font-size: var(--text-sm); color: var(--color-text-muted); max-width: 40ch; line-height: 1.65; }
+
+/* ===========================  FOOTER  =========================== */
+.footer { background: var(--color-bg); border-top: 1px solid var(--color-divider); padding-block: var(--space-12); }
+.footer-inner { max-width: var(--content-wide); margin-inline: auto; padding-inline: var(--space-6); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: var(--space-6); }
+.footer-copy { font-size: var(--text-xs); color: var(--color-text-faint); }
+.footer-links { display: flex; gap: var(--space-6); }
+.footer-links a { font-size: var(--text-xs); color: var(--color-text-faint); text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; }
+.footer-links a:hover { color: var(--color-primary); }
+
+/* ===========================  SCROLL REVEAL  =========================== */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+.reveal.visible { opacity: 1; transform: none; }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+
+/* Placeholder image hover zoom */
+.project-card:hover .project-card-visual img {
+  transform: scale(1.04);
+}
+.project-card-visual img {
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ===========================  RESPONSIVE  =========================== */
+@media (max-width: 900px) {
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-grid { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .project-card.featured { grid-column: span 2; }
+  .achievements-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-10); }
+  .edu-grid { grid-template-columns: 1fr; gap: var(--space-10); }
+  .contact-grid { grid-template-columns: 1fr; gap: var(--space-10); }
+}
+@media (max-width: 640px) {
+  .skills-grid { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .project-card.featured { grid-column: span 1; }
+  .achievements-grid { grid-template-columns: repeat(2, 1fr); }
+  .nav-links { display: none; }
+  .btn-contact { display: none; }
+  .nav-toggle { display: flex; }
+  .hero-stats { gap: var(--space-8); }
+  .hero-title { font-size: clamp(2.5rem, 10vw, 5rem); }
+  .timeline::before { left: 12px; }
+  .timeline-item { grid-template-columns: 36px 1fr; gap: var(--space-4); }
+  .timeline-dot { width: 26px; height: 26px; }
+  .timeline-dot-inner { width: 8px; height: 8px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<a href="#main" class="sr-only">Skip to content</a>
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <svg class="nav-logo-icon" viewBox="0 0 36 36" fill="none" aria-label="MMS Logo">
+        <rect x="2" y="2" width="32" height="32" rx="4" stroke="currentColor" stroke-width="1.5" opacity="0.3"/>
+        <path d="M8 26 L8 10 L18 20 L28 10 L28 26" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <path d="M4 32 L32 32" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span class="nav-logo-name">Mustafa Mahmoud</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="btn-theme" data-theme-toggle aria-label="Toggle dark mode">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <a href="mailto:Mustafa_arch07@yahoo.com" class="btn-contact">Get in Touch</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Navigation menu">
+  <a href="#about" onclick="closeMobileMenu()">About</a>
+  <a href="#skills" onclick="closeMobileMenu()">Skills</a>
+  <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+  <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+  <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<main id="main">
+<section class="hero" aria-label="Introduction">
+  <div class="hero-bg-lines" aria-hidden="true"></div>
+  <div class="container hero-content">
+    <p class="hero-eyebrow reveal">Senior Architectural Engineer & BIM Specialist</p>
+    <h1 class="hero-title reveal reveal-delay-1">
+      <em>Mustafa</em><br>Mahmoud<br>Shawky
+    </h1>
+    <p class="hero-subtitle reveal reveal-delay-2">19+ years shaping high-profile institutional, commercial, and civic projects across Kuwait and the Gulf — combining precision design with advanced BIM automation.</p>
+    <div class="hero-stats reveal reveal-delay-2">
+      <div>
+        <div class="hero-stat-num" data-count="19">19</div>
+        <div class="hero-stat-label">Years Experience</div>
+      </div>
+      <div>
+        <div class="hero-stat-num" data-count="19">19+</div>
+        <div class="hero-stat-label">Revit Plugins Built</div>
+      </div>
+      <div>
+        <div class="hero-stat-num" data-count="80">80%</div>
+        <div class="hero-stat-label">Task Time Reduction</div>
+      </div>
+      <div>
+        <div class="hero-stat-num" data-count="10">10+</div>
+        <div class="hero-stat-label">Major Projects</div>
+      </div>
+    </div>
+    <div class="hero-ctas reveal reveal-delay-3">
+      <a href="#projects" class="btn-primary"><i class="fas fa-layer-group"></i> View Projects</a>
+      <a href="#contact" class="btn-secondary"><i class="fas fa-paper-plane"></i> Contact Me</a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section section" id="about" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">About</p>
+      <h2 class="section-title" id="about-heading">Architect. Engineer.<br><em>Innovator.</em></h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>Competent Architectural Engineer and BIM Manager offering more than 19 years of proven leadership and expertise in architectural working drawings, advanced Revit modeling, onsite construction investigations, and end-to-end BIM process implementation.</p>
+        <p>I have demonstrated success leading multidisciplinary squads on high-profile institutional, commercial, and administrative projects across Kuwait and the Gulf region. I am expert in streamlining coordination workflows, performing rigorous clash-detection, and creating custom Revit automation tools using Python and Dynamo to cut production times significantly.</p>
+        <p>My work spans healthcare campuses, iconic towers, military colleges, mosques, and civic infrastructure — each shaped by a commitment to technical excellence, design integrity, and sustainable practice.</p>
+      </div>
+      <div class="about-meta reveal reveal-delay-1">
+        <div class="about-meta-item">
+          <div class="about-meta-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <div class="about-meta-label">Location</div>
+            <div class="about-meta-value">Kuwait City, Kuwait</div>
+          </div>
+        </div>
+        <div class="about-meta-item">
+          <div class="about-meta-icon"><i class="fas fa-briefcase"></i></div>
+          <div>
+            <div class="about-meta-label">Current Role</div>
+            <div class="about-meta-value">Senior Architectural Engineer & BIM Specialist — Pace, Kuwait</div>
+          </div>
+        </div>
+        <div class="about-meta-item">
+          <div class="about-meta-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div>
+            <div class="about-meta-label">Education</div>
+            <div class="about-meta-value">B.Arch., Minia University, Egypt — Graduated with Excellency</div>
+          </div>
+        </div>
+        <div class="about-meta-item">
+          <div class="about-meta-icon"><i class="fas fa-language"></i></div>
+          <div>
+            <div class="about-meta-label">Languages</div>
+            <div class="about-meta-value">Arabic (Native) · English (Professional B2)</div>
+          </div>
+        </div>
+        <div class="about-meta-item">
+          <div class="about-meta-icon"><i class="fab fa-linkedin"></i></div>
+          <div>
+            <div class="about-meta-label">LinkedIn</div>
+            <div class="about-meta-value">
+              <a href="https://linkedin.com/in/mostafamahmoud-architect" target="_blank" rel="noopener noreferrer" style="color:var(--color-primary);text-decoration:none;">linkedin.com/in/mostafamahmoud-architect</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section" id="skills" aria-labelledby="skills-heading" style="background:var(--color-bg);">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Expertise</p>
+      <h2 class="section-title" id="skills-heading">Core <em>Competencies</em></h2>
+      <p class="section-subtitle">A career built on the intersection of architectural mastery and digital precision.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-card-icon"><i class="fas fa-cube"></i></div>
+        <h3 class="skill-card-title">BIM & Modeling</h3>
+        <p class="skill-card-desc">Expert-level BIM management across complex multidisciplinary projects using industry-leading platforms for clash detection, model coordination, and milestone delivery.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Revit (Certified)</span>
+          <span class="skill-tag">Navisworks</span>
+          <span class="skill-tag">BIM 360 / ACC</span>
+          <span class="skill-tag">AutoCAD</span>
+        </div>
+      </div>
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-card-icon"><i class="fas fa-code"></i></div>
+        <h3 class="skill-card-title">Automation</h3>
+        <p class="skill-card-desc">Developed 19+ custom Revit plugins reducing task times by up to 80%. Expert in Python and Dynamo scripting to bypass Revit limitations and streamline QC workflows.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Dynamo</span>
+          <span class="skill-tag">Revit API</span>
+          <span class="skill-tag">Plugin Dev</span>
+        </div>
+      </div>
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-card-icon"><i class="fas fa-pencil-ruler"></i></div>
+        <h3 class="skill-card-title">Architectural Design</h3>
+        <p class="skill-card-desc">End-to-end design development from concept through working drawings. Deep expertise in sustainable design, materials viability, and international design standards compliance.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Working Drawings</span>
+          <span class="skill-tag">Sustainable Design</span>
+          <span class="skill-tag">Site Supervision</span>
+          <span class="skill-tag">Specifications</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-card-icon"><i class="fas fa-sitemap"></i></div>
+        <h3 class="skill-card-title">Project Management</h3>
+        <p class="skill-card-desc">PMP-certified leader with proven experience managing multidisciplinary teams, coordinating global firms, and delivering landmark projects on time and to design intent.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">PMP Certified</span>
+          <span class="skill-tag">Team Leadership</span>
+          <span class="skill-tag">Client Liaison</span>
+          <span class="skill-tag">Multidisciplinary Coordination</span>
+        </div>
+      </div>
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-card-icon"><i class="fas fa-film"></i></div>
+        <h3 class="skill-card-title">Visualization</h3>
+        <p class="skill-card-desc">High-end renderings, walkthroughs, and presentation models for multi-stakeholder design reviews using industry-standard visualization tools.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">3DS Max</span>
+          <span class="skill-tag">Lumion</span>
+          <span class="skill-tag">Photoshop</span>
+          <span class="skill-tag">Revit Rendering</span>
+        </div>
+      </div>
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-card-icon"><i class="fas fa-search"></i></div>
+        <h3 class="skill-card-title">Clash Detection & QC</h3>
+        <p class="skill-card-desc">Rigorous inter-discipline clash resolution across architectural, structural, and MEP systems — proactively identifying and eliminating critical design discrepancies.</p>
+        <div class="skill-tags">
+          <span class="skill-tag">Clash Detection</span>
+          <span class="skill-tag">QC Workflows</span>
+          <span class="skill-tag">Fire & Life Safety</span>
+          <span class="skill-tag">BIM Accuracy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="experience-section section" id="experience" aria-labelledby="experience-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Career</p>
+      <h2 class="section-title" id="experience-heading">Professional <em>Journey</em></h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-period">Sep 2022 — Present</div>
+          <h3 class="timeline-role">Senior Architectural Engineer & BIM Specialist</h3>
+          <div class="timeline-company">Pace — Kuwait City, Kuwait</div>
+          <ul class="timeline-bullets">
+            <li>Led multidisciplinary BIM team delivering two major KUHSC structures (Allied Health Building & Learning Resource Centre) via Revit and BIM 360.</li>
+            <li>Served as primary liaison for design coordination with global firms Perkins Eastman and Ennead Architects, resolving complex conflicts between international design intent and local engineering requirements.</li>
+            <li>Directed intensive inter-discipline coordination across architectural, structural, and MEP teams, proactively identifying and mitigating critical model clashes.</li>
+            <li>Reviewed 100+ architectural drawings for the Dubai Iconic Tower project within a one-week schedule, identifying major technical deficiencies that posed high critical risks.</li>
+            <li>Developed and deployed 19+ custom Revit automation plugins spanning modeling, analytical reporting, and QC workflows using Dynamo and Python — cutting task completion times by up to 80%.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item reveal reveal-delay-1">
+        <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-period">Dec 2011 — Sep 2022</div>
+          <h3 class="timeline-role">Registered Architectural Engineer & BIM Manager</h3>
+          <div class="timeline-company">Kuwait Technical Consulting Bureau (KTCB) — Kuwait</div>
+          <ul class="timeline-bullets">
+            <li>Collaborated within a multidisciplinary ecosystem to engineer large-scale administrative and institutional projects across Ahmadi, Jahra, Jaber El-Ahmad, and Wafra.</li>
+            <li>Led and mentored a delivery team of 4 draftsmen and 2 architects on multiple commercial, corporate, and municipal developments.</li>
+            <li>Spent 4 years embedded on-site at the flagship KGOC project, supervising contractors and resolving complex structural/architectural issues with the aid of Revit modeling.</li>
+            <li>Programmed highly customized Dynamo scripts and Python nodes to bypass standard Revit limitations and solve advanced geometric modeling challenges.</li>
+            <li>Incorporated sustainable design standards and green building practices into core commercial and administrative blueprints.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="timeline-item reveal reveal-delay-2">
+        <div class="timeline-dot"><div class="timeline-dot-inner"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-period">Jan 2008 — Dec 2011</div>
+          <h3 class="timeline-role">Architectural Engineer</h3>
+          <div class="timeline-company">Trends (Ghaida Al-Khaled Consulting Office) — Kuwait</div>
+          <ul class="timeline-bullets">
+            <li>Provided comprehensive design and leadership support across all core phases of design development, working drawings, and documentation.</li>
+            <li>Conducted regular site investigations and construction monitoring visits to track execution progress and resolve structural discrepancies.</li>
+            <li>Authored high-quality marketing and presentation brochures, directly contributing to a 15% increase in real-estate and design project sales.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects-section section" id="projects" aria-labelledby="projects-heading">
+  <div class="container--wide">
+    <div class="section-header reveal container" style="max-width:var(--content-default);margin-inline:auto;">
+      <p class="section-eyebrow">Portfolio</p>
+      <h2 class="section-title" id="projects-heading">Key <em>Projects</em></h2>
+      <p class="section-subtitle">Selected works spanning healthcare, civic, commercial, and institutional typologies across Kuwait and the Gulf.</p>
+    </div>
+    <div style="padding-inline:var(--space-6);">
+      <div class="projects-filter reveal">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="healthcare">Healthcare & Education</button>
+        <button class="filter-btn" data-filter="civic">Civic & Institutional</button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
+        <button class="filter-btn" data-filter="competition">Competitions</button>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+
+        <!-- KUHSC - featured -->
+        <article class="project-card featured reveal" data-category="healthcare">
+          <div class="project-card-visual" style="aspect-ratio:21/9;overflow:hidden;background:var(--color-surface-offset);"><img src="https://picsum.photos/seed/kuhsc-campus/800/380" alt="Kuwait University Health Sciences Center campus" width="800" height="380" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;opacity:0.9;transition:transform 0.5s ease;"/></div>
+          <div class="project-card-body">
+            <div class="project-card-category">Healthcare & Education</div>
+            <h3 class="project-card-title">Kuwait University Health Sciences Center (KUHSC)</h3>
+            <p class="project-card-desc">Comprehensive 6M m² health science campus including Allied Health Building and Learning Resource Centre. Managed BIM coordination across architectural, structural, MEP and interior design disciplines. Liaised with global architects Perkins Eastman and Ennead Architects. Delivered working drawings across multiple design phases.</p>
+            <div class="project-card-meta">
+              <span class="project-meta-item"><i class="fas fa-building"></i> Pace, Kuwait</span>
+              <span class="project-meta-item"><i class="fas fa-ruler-combined"></i> 6,000,000 m²</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- KDSC -->
+        <article class="project-card reveal reveal-delay-1" data-category="civic">
+          <div class="project-card-visual" style="aspect-ratio:16/9;overflow:hidden;background:var(--color-surface-offset);"><img src="https://picsum.photos/seed/digital-campus/400/225" alt="Kuwait Digital Startup Campus exterior" width="800" height="380" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;opacity:0.9;transition:transform 0.5s ease;"/></div>
+          <div class="project-card-body">
+            <div class="project-card-category">Civic & Institutional</div>
+            <h3 class="project-card-title">Kuwait Digital Startup Campus (KDSC)</h3>
+            <p class="project-card-desc">ICT innovation campus in Mubarak Al-Abdullah City with digital labs, fabrication labs, AR/VR labs, incubators, and collaborative open spaces. Validated BIM models and ensured Fire & Life Safety compliance throughout all design stages.</p>
+            <div class="project-card-meta">
+              <span class="project-meta-item"><i class="fas fa-building"></i> Pace, Kuwait</span>
+              <span class="project-meta-item"><i class="fas fa-ruler-combined"></i> West Mishref, Kuwait</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- KGOC -->
+        <article class="project-card reveal" data-category="civic">
+          <div class="project-card-visual" style="aspect-ratio:16/9;overflow:hidden;background:var(--color-surface-offset);"><img src="https://picsum.photos/seed/kgoc-hq/400/225" alt="Kuwait Gulf Oil Company Headquarters" width="800" height="380" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;opacity:0.9;transition:transform 0.5s ease;"/></div>
+          <div class="project-card-body">
+            <div class="project-card-category">Administrative & Corporate</div>
+            <h3 class="project-card-title">Kuwait Gulf Oil Company (KGOC) Headquarters</h3>
+            <p class="project-card-desc">Landmark 5-storey staggered HQ building (36,738 m² / 102,000 m² site) in Ahmadi, designed as a civic landmark for one of Kuwait's largest oil companies. Embedded 4 years on-site managing BIM and resolving complex structural challenges.</p>
+            <div class="project-card-meta">
+              <span class="project-meta-item"><i class="fas fa-building"></i> KTCB</span>
+              <span class="project-meta-item"><i class="fas fa-ruler-combined"></i> 102,000 m²</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mubarak College -->
+        <article class="project-card reveal reveal-delay-1" data-category="civic">
+          <div class="project-card-visual" style="aspect-ratio:16/9;overflow:hidden;background:var(--color-surface-offset);"><img src="https://picsum.photos/seed/military-college/400/225" alt="Mubarak Al Abdullah Joint Command and Staff College" width="800" height="380" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;opacity:0.9;transition:transform 0.5s ease;"/></div>
+          <div class="project-card-body">
+            <div class="project-card-category">Civic & Institutional</div>
+            <h3 class="project-card-title">Mubarak Al Abdullah Joint Command & Staff College</h3>
+            <p class="project-card-desc">934,300 m² defense college complex near Ministries Zone. Produced working drawings, developed design solutions, and validated Revit model BIM accuracy while ensuring Fire & Life Safety compliance for a population of 300–500 officers and staff.</p>
+            <div class="project-card-meta">
+              <span class="project-meta-item"><i class="fas fa-building"></i> KTCB</span>
+              <span class="project-meta-item"><i class="fas fa-ruler-combined"></i> 934,300 m²</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Dubai Iconic Tower -->
+        <article class="project-card reveal" data-category="commercial">
+          <div class="project-card-visual" style="aspect-ratio:16/9;overflow:hidden;background:var(--color-surface-offset);"><img src="https://picsum.photos/seed/dubai-tower/400/225" alt="Dubai Iconic Tower Creek Harbour" width="800" height="380" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;opacity:0.9;transition:transform 0.5s ease;"/></div>
+          <div class="project-card-body">
+            <div class="project-card-category">Commercial & Mixed-Use</div>
+            <h3 class="project-card-title">Dubai Iconic Tower (Creek Harbour)</h3>
+            <p class="project-card-desc">Reviewed 100+ architectural drawings for the 510m iconic tower within a single week, identifying critical technical deficiencies that posed significant risks to the overall design process and enabling timely corrective action.</p>
+            <div class="project-card-meta">
+              <span class="project-meta-item"><i class="fas fa-building"></i> Pace / Face</span>
+              <span class="project-meta-item"><i class="fas fa-map-marker-alt"></i> Dubai, UAE</span>
+              <span class="project-meta-item"><i class="fas fa-ruler-combined"></i> 510m Tower</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Islamic Center -->
+        <article class="project-card reveal reveal-delay-1" data-category="civic">
+          <div class="project-card-visual" style="aspect-ratio:16/9;overflow:hidden;background:var(--color-surface-offset);"><img src="https://picsum.photos/seed/islamic-center/400/225" alt="Islamic Center Jaber El-Ahmad mosque" width="800" height="380" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;opacity:0.9;transition:transform 0.5s ease;"/></div>
+          <div class="project-card-body">
+            <div class="project-card-category">Civic & Islamic</div>
+            <h3 class="project-card-title">Islamic Center — Jaber El-Ahmad</h3>
+            <p class="project-card-desc">34,138 m² Islamic center expressing contemporary Islamic architecture. Includes Great Mosque, Amiri Suite, administration, family development, Islamic library, and Quran center. Led working drawings, design development, and pattern design.</p>
+            <div class="project-card-meta">
+              <span class="project-meta-item"><i class="fas fa-building"></i> KTCB</span>
+              <span class="project-meta-item"><i class="fas fa-ruler-combined"></i> 34,138 m²</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Olympic Village -->
+        <article class="project-card reveal" data-category="competition">
+          <div class="project-card-visual" style="aspect-ratio:16/9;overflow:hidden;background:var(--color-surface-offset);"><img src="https://picsum.photos/seed/olympic-stadium/400/225" alt="Kuwait Olympic Village competition concept" width="800" height="380" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;opacity:0.9;transition:transform 0.5s ease;"/></div>
+          <div class="project-card-body">
+            <div class="project-card-category">Competition</div>
+            <h3 class="project-card-title">Kuwait Olympic Village Competition</h3>
+            <p class="project-card-desc">Iconic competition concept — "Dew Drops on a Green Leaf" — for a 213,600 m² complex. Swimming pool arena and football arena lead designer. Included 25,000-seat football arena, Olympic pools, mass sports hall, and 8,000-seat arenas.</p>
+            <div class="project-card-meta">
+              <span class="project-meta-item"><i class="fas fa-building"></i> KTCB</span>
+              <span class="project-meta-item"><i class="fas fa-ruler-combined"></i> 213,600 m²</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Dubai Creek Mosque -->
+        <article class="project-card reveal reveal-delay-1" data-category="competition">
+          <div class="project-card-visual" style="aspect-ratio:16/9;overflow:hidden;background:var(--color-surface-offset);"><img src="https://picsum.photos/seed/creek-mosque/400/225" alt="Dubai Creek Harbour Mosque competition" width="800" height="380" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;opacity:0.9;transition:transform 0.5s ease;"/></div>
+          <div class="project-card-body">
+            <div class="project-card-category">Competition</div>
+            <h3 class="project-card-title">Dubai Creek Harbour Mosque Competition</h3>
+            <p class="project-card-desc">Bold circular mosque concept with a giant dome addressing the challenge of aligning toward Makkah while respecting the Creek Tower landmark. Capacity: 7,800+ worshippers. Concept design, model design, and information gathering lead.</p>
+            <div class="project-card-meta">
+              <span class="project-meta-item"><i class="fas fa-map-marker-alt"></i> Dubai Creek Harbour</span>
+              <span class="project-meta-item"><i class="fas fa-mosque"></i> 9,647 m² GFA</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sohag Mosque -->
+        <article class="project-card reveal" data-category="civic">
+          <div class="project-card-visual" style="aspect-ratio:16/9;overflow:hidden;background:var(--color-surface-offset);"><img src="https://picsum.photos/seed/sohag-mosque/400/225" alt="Sohag Neighbourhood Mosque design" width="800" height="380" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;opacity:0.9;transition:transform 0.5s ease;"/></div>
+          <div class="project-card-body">
+            <div class="project-card-category">Civic & Charity</div>
+            <h3 class="project-card-title">Sohag Neighbourhood Mosque</h3>
+            <p class="project-card-desc">Concept-driven charitable mosque with a palm tree minaret inspired by God's creation. Outer walls adorned with Quranic verses. Main prayer capacity: 646. Full concept design, model design, and information gathering role.</p>
+            <div class="project-card-meta">
+              <span class="project-meta-item"><i class="fas fa-mosque"></i> Charity Project</span>
+              <span class="project-meta-item"><i class="fas fa-users"></i> 676 Capacity</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section class="achievements-section section" aria-labelledby="achievements-heading">
+  <div class="container">
+    <div class="section-header reveal" style="margin-bottom:var(--space-16);">
+      <p class="section-eyebrow">Impact</p>
+      <h2 class="section-title" id="achievements-heading" style="color:var(--color-text-inverse);">By the <em style="color:oklch(from var(--color-primary-active) l c h);">Numbers</em></h2>
+    </div>
+    <div class="achievements-grid">
+      <div class="achievement-item reveal">
+        <div class="achievement-num">19+</div>
+        <div class="achievement-label">Years of Architectural<br>& BIM Excellence</div>
+      </div>
+      <div class="achievement-item reveal reveal-delay-1">
+        <div class="achievement-num">19</div>
+        <div class="achievement-label">Custom Revit Plugins<br>Developed & Deployed</div>
+      </div>
+      <div class="achievement-item reveal reveal-delay-2">
+        <div class="achievement-num">80%</div>
+        <div class="achievement-label">Reduction in Task<br>Completion Times</div>
+      </div>
+      <div class="achievement-item reveal reveal-delay-3">
+        <div class="achievement-num">100+</div>
+        <div class="achievement-label">Drawings Reviewed in<br>One Week (Dubai Tower)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION & CERTS -->
+<section class="edu-section section" id="education" aria-labelledby="edu-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Credentials</p>
+      <h2 class="section-title" id="edu-heading">Education &<br><em>Certifications</em></h2>
+    </div>
+    <div class="edu-grid">
+      <div>
+        <div class="edu-card reveal">
+          <div class="edu-card-icon"><i class="fas fa-university"></i></div>
+          <h3 class="edu-card-title">Bachelor of Architecture (B.Arch.)</h3>
+          <div class="edu-card-sub">Minia University, Faculty of Engineering — Egypt · 2002–2007</div>
+          <p class="edu-card-desc">Graduated with Excellency. Specialized in advanced working drawings, computerized graduation architecture projects, and regional urban planning models.</p>
+        </div>
+      </div>
+      <div class="certs-list">
+        <div class="cert-item reveal">
+          <i class="fas fa-certificate cert-icon"></i>
+          <div>
+            <div class="cert-name">Project Management Professional (PMP)®</div>
+            <div class="cert-issuer">Project Management Institute (PMI)</div>
+          </div>
+        </div>
+        <div class="cert-item reveal reveal-delay-1">
+          <i class="fas fa-id-badge cert-icon"></i>
+          <div>
+            <div class="cert-name">Registered Professional Architect</div>
+            <div class="cert-issuer">Kuwait Society of Engineers (KSE)</div>
+          </div>
+        </div>
+        <div class="cert-item reveal reveal-delay-2">
+          <i class="fas fa-stamp cert-icon"></i>
+          <div>
+            <div class="cert-name">Registered Architect</div>
+            <div class="cert-issuer">Egyptian Engineers Syndicate</div>
+          </div>
+        </div>
+        <div class="cert-item reveal reveal-delay-3">
+          <i class="fas fa-globe cert-icon"></i>
+          <div>
+            <div class="cert-name">Eligible — BEFA (Broadly Experienced Foreign Architects)</div>
+            <div class="cert-issuer">Architects Accreditation Council of Australia (AACA)</div>
+          </div>
+        </div>
+        <div class="cert-item reveal">
+          <i class="fas fa-language cert-icon"></i>
+          <div>
+            <div class="cert-name">English B2 Certified</div>
+            <div class="cert-issuer">BUSUU · Professional Working Proficiency</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section section" id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-eyebrow">Contact</p>
+      <h2 class="section-title" id="contact-heading">Let's <em>Connect</em></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <a href="mailto:Mustafa_arch07@yahoo.com" class="contact-item">
+          <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <div class="contact-item-label">Email</div>
+            <div class="contact-item-value">Mustafa_arch07@yahoo.com</div>
+          </div>
+        </a>
+        <a href="tel:+96599191358" class="contact-item">
+          <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <div class="contact-item-label">Phone</div>
+            <div class="contact-item-value">+965 9919 1358</div>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/mostafamahmoud-architect" target="_blank" rel="noopener noreferrer" class="contact-item">
+          <div class="contact-item-icon"><i class="fab fa-linkedin-in"></i></div>
+          <div>
+            <div class="contact-item-label">LinkedIn</div>
+            <div class="contact-item-value">linkedin.com/in/mostafamahmoud-architect</div>
+          </div>
+        </a>
+        <div class="contact-item">
+          <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <div class="contact-item-label">Location</div>
+            <div class="contact-item-value">Kuwait City, Kuwait</div>
+          </div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <div class="contact-cta">
+          <h3 class="contact-cta-title">Open to new<br><em>opportunities</em></h3>
+          <p class="contact-cta-text">Available for senior architectural engineering and BIM management roles across the Gulf region and internationally, including Australia.</p>
+          <a href="mailto:Mustafa_arch07@yahoo.com" class="btn-primary"><i class="fas fa-paper-plane"></i> Send a Message</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-inner">
+    <p class="footer-copy">© 2026 Mustafa Mahmoud Shawky. All rights reserved.</p>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+// Theme Toggle
+(function(){
+  const t = document.querySelector('[data-theme-toggle]');
+  const r = document.documentElement;
+  let d = r.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
+  r.setAttribute('data-theme', d);
+  function updateIcon() {
+    if (!t) return;
+    t.innerHTML = d === 'dark'
+      ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+      : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+    t.setAttribute('aria-label', 'Switch to ' + (d === 'dark' ? 'light' : 'dark') + ' mode');
+  }
+  updateIcon();
+  t && t.addEventListener('click', () => {
+    d = d === 'dark' ? 'light' : 'dark';
+    r.setAttribute('data-theme', d);
+    updateIcon();
+  });
+})();
+
+// Nav scroll state
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+}, { passive: true });
+
+// Mobile menu
+const navToggle = document.getElementById('nav-toggle');
+const mobileMenu = document.getElementById('mobile-menu');
+let menuOpen = false;
+function closeMobileMenu() {
+  menuOpen = false;
+  mobileMenu.classList.remove('open');
+  navToggle.innerHTML = '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+}
+navToggle && navToggle.addEventListener('click', () => {
+  menuOpen = !menuOpen;
+  mobileMenu.classList.toggle('open', menuOpen);
+  navToggle.innerHTML = menuOpen
+    ? '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>'
+    : '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>';
+});
+
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => revealObs.observe(el));
+
+// Project filter
+const filterBtns = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    projectCards.forEach(card => {
+      const show = filter === 'all' || card.dataset.category === filter;
+      card.style.display = show ? '' : 'none';
+      if (show && !card.classList.contains('visible')) {
+        card.classList.add('visible');
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
